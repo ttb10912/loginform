@@ -1,25 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginForm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-bn-EXV">
+                                <rect key="frame" x="20" y="88" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.6796875" green="0.0066306156162181098" blue="0.01299399165679381" alpha="0.87036637931034477" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzS-qX-X6X">
+                                <rect key="frame" x="20" y="126" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.6796875" green="0.0066306156162181098" blue="0.01299399165679381" alpha="0.87036637931034477" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ce4-gW-tMF">
+                                <rect key="frame" x="9" y="175" width="149" height="30"/>
+                                <color key="backgroundColor" red="0.03872157759" green="0.1776783713" blue="0.28848157050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Danh sách tài khoản">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.62437900639999999" green="0.0" blue="0.0058452836239999998" alpha="0.67960438830000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act_listUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exH-tH-ieh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-JC-bNE">
+                                <rect key="frame" x="166" y="175" width="149" height="30"/>
+                                <color key="backgroundColor" red="0.03872157759" green="0.1776783713" blue="0.28848157050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Xóa tài khoản">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.62437900639999999" green="0.0" blue="0.0058452836239999998" alpha="0.67960438830000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act_deleteUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ps1-KC-Kqu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXD-qP-zIL">
+                                <rect key="frame" x="9" y="213" width="149" height="30"/>
+                                <color key="backgroundColor" red="0.03872157759" green="0.1776783713" blue="0.28848157050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Đăng ký mới">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.62437900639999999" green="0.0" blue="0.0058452836239999998" alpha="0.67960438830000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act_regUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4R-b4-fgh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR8-dS-3uO">
+                                <rect key="frame" x="166" y="213" width="149" height="30"/>
+                                <color key="backgroundColor" red="0.03872157759" green="0.1776783713" blue="0.28848157050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Thay đổi thông tin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.62437900639999999" green="0.0" blue="0.0058452836239999998" alpha="0.67960438830000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act_changeInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIz-qe-Blj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvu-qA-f2T">
+                                <rect key="frame" x="9" y="251" width="306" height="30"/>
+                                <color key="backgroundColor" red="0.03872157759" green="0.1776783713" blue="0.28848157050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Đăng nhập">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.62437900639999999" green="0.0" blue="0.0058452836239999998" alpha="0.67960438830000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="act_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6us-Po-TQY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tf_pass" destination="vzS-qX-X6X" id="LvM-mG-6Zh"/>
+                        <outlet property="tf_user" destination="AcP-bn-EXV" id="S0L-iU-Wic"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="289"/>
         </scene>
     </scenes>
 </document>
